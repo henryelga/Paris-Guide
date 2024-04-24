@@ -1,9 +1,30 @@
+// Scroll to Top Function
+
+var scrollToTopBtn = document.querySelector(".scrollToTopBtn");
+var rootElement = document.documentElement;
+
+function handleScroll() {
+  if (rootElement.scrollTop > 300) {
+    scrollToTopBtn.classList.add("showBtn");
+  } else {
+    scrollToTopBtn.classList.remove("showBtn");
+  }
+}
+
+function scrollToTop() {
+  rootElement.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}
+scrollToTopBtn.addEventListener("click", scrollToTop);
+document.addEventListener("scroll", handleScroll);
+
+// Hotels API
+
 document.addEventListener("DOMContentLoaded", function () {
   const hotelsURL =
     "https://serpapi.com/search?engine=google_hotels&q=Paris&check_in_date=2024-07-23&check_out_date=2024-10-12&adults=2&currency=EUR&gl=us&hl=en&api_key=cde9815a478bd22457922ddd15304b441b8774ee5084546b9e1fd1705a434590";
-
-  const newsURL =
-    "https://serpapi.com/search?engine=google_news&q=france%20olympics&api_key=cde9815a478bd22457922ddd15304b441b8774ee5084546b9e1fd1705a434590";
 
   let hotelsData = []; // Hotel Data
 
@@ -127,22 +148,61 @@ document.addEventListener("DOMContentLoaded", function () {
     .addEventListener("change", displayHotels);
 });
 
-var scrollToTopBtn = document.querySelector(".scrollToTopBtn");
-var rootElement = document.documentElement;
+// News API
 
-function handleScroll() {
-  if (rootElement.scrollTop > 300) {
-    scrollToTopBtn.classList.add("showBtn");
-  } else {
-    scrollToTopBtn.classList.remove("showBtn");
-  }
-}
+const newsURL =
+  "https://serpapi.com/search?engine=google_news&q=france%20olympics&api_key=cde9815a478bd22457922ddd15304b441b8774ee5084546b9e1fd1705a434590";
 
-function scrollToTop() {
-  rootElement.scrollTo({
-    top: 0,
-    behavior: "smooth",
+fetch(newsURL)
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    return response.json();
+  })
+  .then((data) => {
+    console.log(data);
+    console.log(data.news_results);
+
+    var newsTitle = data.news_results[1].title;
+    var newsImage = data.news_results[1].thumbnail;
+    var newsDate = data.news_results[1].date;
+    var newsLink = data.news_results[1].link;
+    var newsSource = data.news_results[1].source.name;
+    var newsAuthor = data.news_results[1].source.authors[0];
+
+    console.log(data.news_results[1])
+    console.log(newsTitle);
+    console.log(newsImage);
+    console.log(newsDate);
+    console.log(newsLink);
+    console.log(newsSource);
+    console.log(newsAuthor);
+
+    var newsListDiv = document.getElementById("newsList");
+
+    // Loop through each news item and create HTML elements
+    data.news_results.forEach((news) => {
+      var newsBox = document.createElement("div");
+      newsBox.classList.add("newsBox");
+
+      // Construct HTML content for news box
+    //   var htmlContent = `
+    //     <div class="newsContent">
+    //       <p class="newsTitle"><a href="${news.link}" target="_blank">${news.title}</a></p>
+    //       <p class="newsSource">Source: ${news.source}</p>
+    //       <p class="newsDate">Date: ${news.date}</p>
+    //       <img src="${news.thumbnail}" class="newsThumbnail" alt="Thumbnail">
+    //     </div>
+    //   `;
+
+      // Append news box content to the news box element
+      newsBox.innerHTML = htmlContent;
+
+      // Append news box element to the news list container
+      newsListDiv.appendChild(newsBox);
+    });
+  })
+  .catch((error) => {
+    console.error("Error fetching news data:", error);
   });
-}
-scrollToTopBtn.addEventListener("click", scrollToTop);
-document.addEventListener("scroll", handleScroll);
