@@ -181,23 +181,115 @@ footer ul {
     color: white;
 }
 
+/* Input Fields */
+
+.inputFields {
+    padding-top: 1em;
+    margin: 0 3em;
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type="text"],
+select {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="text"]{
+    width: 50%;
+}
+
+
 /* Book Hotels */
 
-#hotelList{
-    display: flex;
-    flex-direction: row;
-    width: fit-content;
+#hotelList {
+    padding: 10px;
+    margin: auto 2em;
 }
 
 .hotelBox {
+    display: flex;
+    justify-content: space-between;
     border: 1px solid #ccc;
     padding: 10px;
-    margin-bottom: 20px;
+    margin: 15px 5px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+.hotelContent {
+    margin-right: 10px;
+}
+
+.hotelBox .textSmall {
+    margin: 0;
+}
+
+.subHeading {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.amenitiesList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.amenitiesList div {
+    margin-bottom: 15px;
+}
+
+.amenityBox {
+    border: solid #000 .5px;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 2px;
+    transition: 0.7s ease
+}
+
+.amenityBox:hover {
+    background-color: #000;
+    color: #fff;
+    transition: 0.7s ease;
+    cursor: default;
+}
+
 .hotelImage {
-    /* max-width: 100%; */
+    max-width: 100%;
     height: auto;
     margin-bottom: 10px;
+}
+
+.imageDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+.imageDiv img {
+    padding-bottom: 10px;
+}
+
+.buttonLink {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Button hover effect */
+.buttonLink:hover {
+    background-color: #fff;
+    color: #000;
+    border-color: #000;
 }
