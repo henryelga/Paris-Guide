@@ -116,7 +116,7 @@ footer {
     justify-content: space-around;
 }
 
-footer .textHeader{
+footer .textHeader {
     padding-bottom: 1em;
 }
 
@@ -129,7 +129,7 @@ footer ul {
 
 /* Social Media Icons */
 
-.icons{
+.icons {
     display: flex;
     justify-content: space-evenly;
     padding-bottom: .5em;
@@ -179,4 +179,24 @@ footer ul {
 .fa-pinterest {
     background: #cb2027;
     color: white;
+}
+
+/* Book Hotels */
+
+.hotelList{
+    display: flex;
+    flex-direction: row;
+}
+
+.hotelBox {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.hotelImage {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
 }
