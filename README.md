@@ -10,7 +10,7 @@
  - [ ] Provide a visually pleasing display of various tourist-related content (4%)
  - [x] Display useful tourist information on the map (4%)
  - [x] Implement content filtering for users (4%)
- - [ ] Allow users to show/hide Points of Interest on the map (4%)
+ - [x] Allow users to show/hide Points of Interest on the map (4%)
  - [ ] Include advanced custom content, incorporating images (4%)
  - [ ] Integrate custom markers into the display (4%)
  - [ ] Enable users to find a route between various locations (4%)
@@ -25,3 +25,4 @@
 - https://serpapi.com/google-hotels-api
 - https://serpapi.com/google-news-api 
 - https://codepen.io/marcelrojas/pen/GRZOWwp
+- https://latlong.info/france/paris#info

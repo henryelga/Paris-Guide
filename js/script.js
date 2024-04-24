@@ -171,7 +171,7 @@ fetch(newsURL)
     var newsSource = data.news_results[1].source.name;
     var newsAuthor = data.news_results[1].source.authors[0];
 
-    console.log(data.news_results[1])
+    console.log(data.news_results[1]);
     console.log(newsTitle);
     console.log(newsImage);
     console.log(newsDate);
@@ -187,14 +187,14 @@ fetch(newsURL)
       newsBox.classList.add("newsBox");
 
       // Construct HTML content for news box
-    //   var htmlContent = `
-    //     <div class="newsContent">
-    //       <p class="newsTitle"><a href="${news.link}" target="_blank">${news.title}</a></p>
-    //       <p class="newsSource">Source: ${news.source}</p>
-    //       <p class="newsDate">Date: ${news.date}</p>
-    //       <img src="${news.thumbnail}" class="newsThumbnail" alt="Thumbnail">
-    //     </div>
-    //   `;
+      //   var htmlContent = `
+      //     <div class="newsContent">
+      //       <p class="newsTitle"><a href="${news.link}" target="_blank">${news.title}</a></p>
+      //       <p class="newsSource">Source: ${news.source}</p>
+      //       <p class="newsDate">Date: ${news.date}</p>
+      //       <img src="${news.thumbnail}" class="newsThumbnail" alt="Thumbnail">
+      //     </div>
+      //   `;
 
       // Append news box content to the news box element
       newsBox.innerHTML = htmlContent;
@@ -206,3 +206,104 @@ fetch(newsURL)
   .catch((error) => {
     console.error("Error fetching news data:", error);
   });
+
+// Google Maps
+
+let service;
+let map;
+
+function loadMap() {
+  let services_centre_location = { lat: 48.85661400, lng: 2.35222190 }; // Paris
+
+  map = new google.maps.Map(document.getElementById("map"), {
+    mapId: "MY_MAP_ID",
+    zoom: 17,
+    center: new google.maps.LatLng(services_centre_location),
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    mapTypeControlOptions: {
+      mapTypeIds: ["roadmap", "hide_poi"],
+    },
+  });
+
+  hidePointsOfInterest(map);
+
+  service = new google.maps.places.PlacesService(map);
+
+  service.nearbySearch(
+    {
+      location: services_centre_location, // centre of the search
+      radius: 500, // radius (in metres) of the search
+      type: "hotel",
+    },
+    getNearbyServicesMarkers
+  );
+}
+
+function getNearbyServicesMarkers(results, status) {
+  if (status === google.maps.places.PlacesServiceStatus.OK) {
+    results.forEach((result) => {
+      createMarker(result);
+    });
+  }
+}
+
+let infoWindow = null;
+function createMarker(place) {
+  let icon = document.createElement("img");
+  icon.src = place.icon;
+  icon.style.width = "20px";
+  icon.style.height = "20px";
+
+  let marker = new google.maps.marker.AdvancedMarkerElement({
+    map: map,
+    content: icon,
+    position: place.geometry.location,
+  });
+
+  if (infoWindow === null) {
+    infoWindow = new google.maps.InfoWindow();
+  }
+
+  google.maps.event.addListener(marker, "click", () => {
+    request = {
+      placeId: place.place_id,
+      fields: [
+        "name",
+        "formatted_address",
+        "international_phone_number",
+        "icon",
+        "geometry",
+      ],
+    };
+    service.getDetails(request, (placeDetails) =>
+      infoWindow.setContent(
+        "<p><strong>" +
+          placeDetails.name +
+          "</strong><br>" +
+          placeDetails.formatted_address +
+          "</br>" +
+          placeDetails.international_phone_number +
+          "</p>"
+      )
+    );
+
+    infoWindow.open(map, marker);
+  });
+}
+
+function hidePointsOfInterest(map) {
+  let styles = [
+    {
+      featureType: "poi",
+      stylers: [{ visibility: "off" }],
+    },
+  ];
+
+  let styledMapType = new google.maps.StyledMapType(styles, {
+    name: "POI Hidden",
+    alt: "Hide Points of Interest",
+  });
+  map.mapTypes.set("hide_poi", styledMapType);
+
+  map.setMapTypeId("hide_poi");
+}

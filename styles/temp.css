@@ -339,16 +339,16 @@ input[type="text"] {
     line-height: 2em;
 }
 
-.shopContent:hover{
+.shopContent:hover {
     background-color: #eee;
     transition: 0.5 ease;
 }
 
-.shopContent div{
+.shopContent div {
     margin: 0 5px;
 }
 
-.shopContent img{
+.shopContent img {
     /* float: right; */
     max-width: 392px;
     height: auto;
@@ -356,12 +356,12 @@ input[type="text"] {
 
 /* Food Section */
 
-#food{
+#food {
     height: 90vh;
     background-color: #000;
     background-image: url("/images/food_bg.jpg");
-    background-size: 100% auto; 
-    background-repeat: no-repeat; 
+    background-size: 100% auto;
+    background-repeat: no-repeat;
     background-position: center;
     color: #fff;
     margin: 0;
@@ -369,11 +369,11 @@ input[type="text"] {
     /* filter: brightness(70%); */
 }
 
-.foodContent{
+.foodContent {
     padding-top: 1em;
 }
 
-.foodText{
+.foodText {
     padding-top: 3em;
     width: 50%;
     line-height: 2em;
@@ -397,4 +397,11 @@ input[type="text"] {
 .foodButton:hover {
     background-color: #fff;
     color: #000;
+}
+
+/* Google Maps Section */
+#map {
+    width: 100%;
+    height: 60vh;
+    border: thin solid #ccc;
 }
