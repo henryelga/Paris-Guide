@@ -2,6 +2,23 @@
 
 ### Author: Elga Jerusha Henry
 
+### Website Features:
+ - [ ] Ensure a professional appearance that would attract potential users (20%)
+ - [ ] Create a responsive design for mobile phones (< 500px) and tablets (between 500px and 1000px) in both portrait and landscape mode, as well as computers (> 1000px) (20%)
+ - [ ] Read a JSON object from a JSON file and integrate it with the results of a google.maps.place object (8%)
+ - [ ] Utilize two appropriate APIs, such as language translation and currency conversion (8%)
+ - [ ] Provide a visually pleasing display of various tourist-related content (4%)
+ - [ ] Display useful tourist information on the map (4%)
+ - [ ] Implement content filtering for users (4%)
+ - [ ] Allow users to show/hide Points of Interest on the map (4%)
+ - [ ] Include advanced custom content, incorporating images (4%)
+ - [ ] Integrate custom markers into the display (4%)
+ - [ ] Enable users to find a route between various locations (4%)
+ - [ ] Allow users to select multiple stops along a route (4%)
+ - [ ] Develop the application as a React web app (4%)
+ - [ ] Host the application on a server that serves webpages as HTTPS (4%)
+ - [ ] Enable the application to be downloadable as a Progressive Web App (PWA) on a computer, mobile phone, or tablet (4%)
+
 ### References:
 - https://www.travelguys.fr/en/2023/12/04/olympics-2024-in-paris-what-to-expect-as-a-tourist/
 - https://olympics.com/en/news/things-to-do-in-paris-2024-olympics

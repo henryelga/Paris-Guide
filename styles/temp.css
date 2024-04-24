@@ -52,7 +52,7 @@ nav ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #1E1B18;
+    background-color: #000;
 }
 
 nav li {
@@ -135,7 +135,7 @@ nav li a:hover:not(.active) {
 /* Footer */
 
 footer {
-    background-color: #1E1B18;
+    background-color: #000;
     color: #fff;
 }
 
@@ -323,4 +323,78 @@ input[type="text"] {
     background-color: #fff;
     color: #000;
     border-color: #000;
+}
+
+/* Shopping Section */
+
+.shopContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 15px 5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    line-height: 2em;
+}
+
+.shopContent:hover{
+    background-color: #eee;
+    transition: 0.5 ease;
+}
+
+.shopContent div{
+    margin: 0 5px;
+}
+
+.shopContent img{
+    /* float: right; */
+    max-width: 392px;
+    height: auto;
+}
+
+/* Food Section */
+
+#food{
+    height: 90vh;
+    background-color: #000;
+    background-image: url("/images/food_bg.jpg");
+    background-size: 100% auto; 
+    background-repeat: no-repeat; 
+    background-position: center;
+    color: #fff;
+    margin: 0;
+    padding: 10px 3em;
+    /* filter: brightness(70%); */
+}
+
+.foodContent{
+    padding-top: 1em;
+}
+
+.foodText{
+    padding-top: 3em;
+    width: 50%;
+    line-height: 2em;
+}
+
+.foodButton {
+    /* Remove default button styles */
+    border: solid 1px #fff;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 7px;
+    transition: background-color 0.3s ease;
+    margin-top: 1.6em;
+}
+
+.foodButton:hover {
+    background-color: #fff;
+    color: #000;
 }
