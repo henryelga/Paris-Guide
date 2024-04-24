@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Platypi", serif;
+    font-optical-sizing: auto;
+    /* font-weight: <weight>;
+    font-style: normal; */
+}
+
+/* NavBar */
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #1E1B18;
+}
+
+li {
+    float: right;
+    border-left: 1px solid #FFFAFF;
+}
+
+li:first-child {
+    border-left: none;
+}
+
+li a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+/* Image Gallery */
+
+.imageGallery{
+    display: flex;
+}
+
+.imageContainer{
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    transition: height 0.7s ease;
+}
+
+.imageContainer img{
+    height: 130vh;
+    display: block;
+    opacity: 0.85;
+    filter: brightness(70%);
+    transition: transform 0.7s ease;
+}
+
+.imageContainer:hover img{
+    transition: transform 0.7s ease;
+    transform: scale(1.1);
+    filter: brightness(100%);
+}
+
+.imageText{
+    position: absolute;
+    width: 80%;
+    bottom: 20px;
+    left: 15px;
+    font-size: 2.5em;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Main Container */
+
+.mainContainer{
+    margin: 0 3em;
+}
+
+.planTrip{
+    
+}
