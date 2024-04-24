@@ -183,9 +183,10 @@ footer ul {
 
 /* Book Hotels */
 
-.hotelList{
+#hotelList{
     display: flex;
     flex-direction: row;
+    width: fit-content;
 }
 
 .hotelBox {
@@ -196,7 +197,7 @@ footer ul {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .hotelImage {
-    max-width: 100%;
+    /* max-width: 100%; */
     height: auto;
     margin-bottom: 10px;
 }
