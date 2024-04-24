@@ -16,7 +16,7 @@ nav {
     z-index: 1000;
 }
 
-ul {
+nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -24,16 +24,16 @@ ul {
     background-color: #1E1B18;
 }
 
-li {
+nav li {
     float: right;
     border-left: 1px solid #FFFAFF;
 }
 
-li:first-child {
+nav li:first-child {
     border-left: none;
 }
 
-li a {
+nav li a {
     display: block;
     color: #fff;
     text-align: center;
@@ -41,24 +41,24 @@ li a {
     text-decoration: none;
 }
 
-li a:hover:not(.active) {
+nav li a:hover:not(.active) {
     background-color: #111;
 }
 
 /* Image Gallery */
 
-.imageGallery{
+.imageGallery {
     display: flex;
 }
 
-.imageContainer{
+.imageContainer {
     overflow: hidden;
     position: relative;
     margin: 0;
     transition: height 0.7s ease;
 }
 
-.imageContainer img{
+.imageContainer img {
     height: 130vh;
     display: block;
     opacity: 0.85;
@@ -66,13 +66,13 @@ li a:hover:not(.active) {
     transition: transform 0.7s ease;
 }
 
-.imageContainer:hover img{
+.imageContainer:hover img {
     transition: transform 0.7s ease;
     transform: scale(1.1);
     filter: brightness(100%);
 }
 
-.imageText{
+.imageText {
     position: absolute;
     width: 80%;
     bottom: 20px;
@@ -84,10 +84,99 @@ li a:hover:not(.active) {
 
 /* Main Container */
 
-.mainContainer{
+.mainContainer {
     margin: 0 3em;
 }
 
-.planTrip{
-    
+.planTrip {
+    padding-top: 3em;
+}
+
+.textSmall {
+    color: #818080;
+}
+
+.textHeader {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+/* Footer */
+
+footer {
+    background-color: #1E1B18;
+    color: #fff;
+}
+
+.footerContent {
+    margin: 0 2em;
+    padding: 2em 0 4em 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+footer .textHeader{
+    padding-bottom: 1em;
+}
+
+footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Social Media Icons */
+
+.icons{
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: .5em;
+}
+
+.fa {
+    padding: 15px;
+    font-size: 20px;
+    width: 20px;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px;
+    transition: transform 0.7s ease;
+}
+
+.fa:hover {
+    opacity: 0.7;
+    transition: transform 0.7s ease;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-google {
+    background: #dd4b39;
+    color: white;
+}
+
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+.fa-pinterest {
+    background: #cb2027;
+    color: white;
 }
