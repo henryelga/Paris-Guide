@@ -6,3 +6,5 @@
 - https://www.travelguys.fr/en/2023/12/04/olympics-2024-in-paris-what-to-expect-as-a-tourist/
 - https://olympics.com/en/news/things-to-do-in-paris-2024-olympics
 - https://serpapi.com/google-hotels-api
+- https://serpapi.com/google-news-api 
+- https://codepen.io/marcelrojas/pen/GRZOWwp
