@@ -161,48 +161,40 @@ fetch(newsURL)
     return response.json();
   })
   .then((data) => {
-    console.log(data);
-    console.log(data.news_results);
-
-    var newsTitle = data.news_results[1].title;
-    var newsImage = data.news_results[1].thumbnail;
-    var newsDate = data.news_results[1].date;
-    var newsLink = data.news_results[1].link;
-    var newsSource = data.news_results[1].source.name;
-    var newsAuthor = data.news_results[1].source.authors[0];
-
-    console.log(data.news_results[1]);
-    console.log(newsTitle);
-    console.log(newsImage);
-    console.log(newsDate);
-    console.log(newsLink);
-    console.log(newsSource);
-    console.log(newsAuthor);
-
     var newsListDiv = document.getElementById("newsList");
 
-    // Loop through each news item and create HTML elements
-    data.news_results.forEach((news) => {
+    for (let i = 0; i < 6; i++) {
+      const news = data.news_results[i];
+
+      // Create a new div element for each news item
       var newsBox = document.createElement("div");
-      newsBox.classList.add("newsBox");
+
+      // Split the date string to display only the date part
+      const dateString = news.date;
+      const dateparts = dateString.split(", ")[0];
 
       // Construct HTML content for news box
-      //   var htmlContent = `
-      //     <div class="newsContent">
-      //       <p class="newsTitle"><a href="${news.link}" target="_blank">${news.title}</a></p>
-      //       <p class="newsSource">Source: ${news.source}</p>
-      //       <p class="newsDate">Date: ${news.date}</p>
-      //       <img src="${news.thumbnail}" class="newsThumbnail" alt="Thumbnail">
-      //     </div>
-      //   `;
+      var htmlContent = `
+    <div class="newsContent">
+    <div>
+      <p class="newsTitle subHead">${news.title}</p>
+      <p class="newsSource">Source: ${news.source.name}</p>
+      <p class="newsAuthor textSmall">Author(s): ${news.source.authors}</p>
+      <p class="newsDate">Date: ${dateparts}</p>
+      <p>Read More <a href="${news.link}" target="_blank">here</a></p></div>
+      <div class="iconDiv">
+      <img src="${news.source.icon}" class="newsIcon" alt="Thumbnail"></div>
+    </div>
+  `;
 
       // Append news box content to the news box element
       newsBox.innerHTML = htmlContent;
 
-      // Append news box element to the news list container
+      // Append news box element to the news container
       newsListDiv.appendChild(newsBox);
-    });
+    }
   })
+  // })
   .catch((error) => {
     console.error("Error fetching news data:", error);
   });
@@ -213,7 +205,7 @@ let service;
 let map;
 
 function loadMap() {
-  let services_centre_location = { lat: 48.85661400, lng: 2.35222190 }; // Paris
+  let services_centre_location = { lat: 48.856614, lng: 2.3522219 }; // Paris
 
   map = new google.maps.Map(document.getElementById("map"), {
     mapId: "MY_MAP_ID",

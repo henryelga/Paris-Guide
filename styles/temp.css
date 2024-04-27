@@ -7,6 +7,12 @@ body {
     font-style: normal; */
 }
 
+.active{
+    font-family: "Lugrasimo", cursive;
+    font-weight: 800;
+    font-style: normal;
+}
+
 /* Scroll to top */
 
 .scrollToTopBtn {
@@ -121,6 +127,10 @@ nav li a:hover:not(.active) {
 
 .planTrip {
     padding-top: 3em;
+}
+
+.bottomLine{
+    padding-bottom: 3em;
 }
 
 .textSmall {
@@ -267,6 +277,12 @@ input[type="text"] {
     margin: 0;
 }
 
+.subHead {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0;
+}
+
 .amenitiesList {
     display: flex;
     flex-wrap: wrap;
@@ -336,12 +352,14 @@ input[type="text"] {
     margin: 15px 5px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
     line-height: 2em;
 }
 
 .shopContent:hover {
     background-color: #eee;
-    transition: 0.5 ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
 }
 
 .shopContent div {
@@ -349,10 +367,57 @@ input[type="text"] {
 }
 
 .shopContent img {
-    /* float: right; */
     max-width: 392px;
     height: auto;
 }
+
+
+/* News Section */
+
+#newsList {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+}
+
+.newsContent {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.newsContent:hover {
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.newsContent a {
+    color: #000;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.newsContent a:hover {
+    color: #594e7a;
+}
+
+.iconDiv {
+    margin-left: 10px;
+}
+
+.newsIcon {
+    max-width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin-top: 10px;
+}
+
+
 
 /* Food Section */
 

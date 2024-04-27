@@ -3,10 +3,10 @@
 ### Author: Elga Jerusha Henry
 
 ### Website Features:
- - [ ] Ensure a professional appearance that would attract potential users (20%)
+ - [x] Ensure a professional appearance that would attract potential users (20%)
  - [ ] Create a responsive design for mobile phones (< 500px) and tablets (between 500px and 1000px) in both portrait and landscape mode, as well as computers (> 1000px) (20%)
  - [x] Read a JSON object from a JSON file and integrate it with the results of a google.maps.place object (8%)
- - [ ] Utilize two appropriate APIs, such as language translation and currency conversion (8%)
+ - [x] Utilize two appropriate APIs, such as language translation and currency conversion (8%)
  - [x] Provide a visually pleasing display of various tourist-related content (4%)
  - [x] Display useful tourist information on the map (4%)
  - [x] Implement content filtering for users (4%)
