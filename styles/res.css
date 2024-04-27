@@ -41,6 +41,20 @@
     }
 }
 
+@media (max-width: 900px) {
+    .hotelBox {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .imageDiv {
+        max-width: 50%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+}
+
 @media (max-width: 850px) {
     #food {
         background-image: url("/images/food_bg_res.jpg");
@@ -51,6 +65,77 @@
 
     .foodText {
         width: 80%;
+    }
+
+    .newsContent {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 820px) {
+    .footerContent {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footerLinks ul {
+        display: none;
+        padding: 0;
+    }
+
+    .textHeader.activeFooter+ul {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .footerLinks .textHeader {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid white;
+        padding: 10px 0;
+    }
+
+    .dropdownIcon {
+        font-size: 1.2em;
+        cursor: pointer;
+    }
+
+    .footerLinks ul li {
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 800px) {
+    .shopContent {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .shopContent:nth-child(odd) {
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbarNav {
+        display: none;
+    }
+
+    .navbarToggler {
+        display: block;
+    }
+
+    .navbarNav.show {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #000;
     }
 }
 
@@ -101,11 +186,28 @@
         width: 100%;
         line-height: 1.4em;
     }
+
+    #newsList {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 550px) {
     .mainContainer {
         margin: auto .5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .shopContent {
+        display: flex;
+        align-items: center;
+    }
+
+    .shopContent img {
+        max-width: 100%;
+        height: auto;
     }
 }
 
@@ -122,111 +224,5 @@
 @media (max-width: 380px) {
     .mainContainer {
         margin: auto .09em;
-    }
-}
-
-@media (max-width: 767px) {
-    .navbarNav {
-        display: none;
-    }
-
-    .navbarToggler {
-        display: block;
-    }
-
-    .navbarNav.show {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: #000;
-    }
-}
-
-@media (max-width: 900px) {
-    .hotelBox {
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-    }
-
-    .imageDiv {
-        max-width: 50%;
-        height: auto;
-        margin-bottom: 10px;
-    }
-}
-
-@media (max-width: 800px) {
-    .shopContent {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .shopContent:nth-child(odd) {
-        flex-direction: column-reverse;
-    }
-}
-
-@media (max-width: 480px) {
-    .shopContent {
-        display: flex;
-        align-items: center;
-    }
-
-    .shopContent img {
-        max-width: 100%;
-        height: auto;
-    }
-}
-
-@media (max-width: 850px) {
-    .newsContent {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-}
-
-@media (max-width: 650px) {
-    #newsList {
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 820px) {
-    .footerContent {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footerLinks ul {
-        display: none;
-        padding: 0;
-    }
-
-    .textHeader.activeFooter + ul {
-        display: block;
-        padding: 10px 0;
-    }
-
-    .footerLinks .textHeader {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 1px solid white;
-        padding: 10px 0;
-    }
-
-    .dropdownIcon {
-        font-size: 1.2em;
-        cursor: pointer;
-    }
-
-    .footerLinks ul li {
-        padding: 10px 0;
     }
 }
