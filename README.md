@@ -11,7 +11,7 @@
  - [x] Display useful tourist information on the map (4%)
  - [x] Implement content filtering for users (4%)
  - [x] Allow users to show/hide Points of Interest on the map (4%)
- - [ ] Include advanced custom content, incorporating images (4%)
+ - [x] Include advanced custom content, incorporating images (4%)
  - [x] Integrate custom markers into the display (4%)
  - [ ] Enable users to find a route between various locations (4%)
  - [ ] Allow users to select multiple stops along a route (4%)
