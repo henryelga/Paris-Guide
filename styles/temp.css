@@ -412,8 +412,8 @@ input[type="text"] {
 }
 
 .newsIcon {
-    max-width: 70px;
-    height: 70px;
+    max-width: 150px;
+    height: 150px;
     object-fit: contain;
     margin-top: 10px;
 }
