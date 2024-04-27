@@ -234,6 +234,8 @@ function loadMap() {
 function getNearbyServicesMarkers(results, status) {
   if (status === google.maps.places.PlacesServiceStatus.OK) {
     results.forEach((result) => {
+      console.log(result);
+      var gPhoto = result.photos[0].getUrl();
       createMarker(result);
     });
   }
@@ -265,21 +267,54 @@ function createMarker(place) {
         "international_phone_number",
         "icon",
         "geometry",
+        "photos",
+        "rating",
+        "opening_hours",
       ],
     };
-    service.getDetails(request, (placeDetails) =>
-      infoWindow.setContent(
-        "<p><strong>" +
-          placeDetails.name +
-          "</strong><br>" +
-          placeDetails.formatted_address +
-          "</br>" +
-          placeDetails.international_phone_number +
-          "</p>"
-      )
-    );
+    service.getDetails(request, (placeDetails) => {
+      let openingHoursHtml = "";
+      if (placeDetails.opening_hours) {
+        if (placeDetails.opening_hours.open_now) {
+          openingHoursHtml += "<p>Open now</p>";
+        } else {
+          openingHoursHtml += "<p>Closed now</p>";
+        }
+      } else {
+        openingHoursHtml = "<p>Opening hours not available</p>";
+      }
+      let infoContent = `
+  <div class="custom-info-window">
+    <div class="custom-info-window-image">
+      <img src="${place.photos[0].getUrl()}" alt="${
+        placeDetails.name
+      } thumbnail">
+    </div>
+    <div class="custom-info-window-content">
+      <h3>${placeDetails.name}</h3>
+      ${
+        placeDetails.rating !== undefined
+          ? `<p class="rating textSmall">Rating: ${placeDetails.rating}</p>`
+          : ""
+      }
+      ${openingHoursHtml ? `<p class="hours">${openingHoursHtml}</p>` : ""}
+      ${
+        placeDetails.formatted_address
+          ? `<p>${placeDetails.formatted_address}</p>`
+          : ""
+      }
+      ${
+        placeDetails.international_phone_number
+          ? `<p>${placeDetails.international_phone_number}</p>`
+          : ""
+      }
+    </div>
+  </div>
+`;
 
-    infoWindow.open(map, marker);
+      infoWindow.setContent(infoContent);
+      infoWindow.open(map, marker);
+    });
   });
 }
 
