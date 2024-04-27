@@ -9,17 +9,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Lugrasimo&family=Platypi:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Lugrasimo&family=Platypi:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
 
     <!-- Social Media Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="styles/temp.css">
+    <link rel="stylesheet" href="styles/res.css">
     <title>Paris Guide</title>
 </head>
 
 <body>
-    <nav>
+    <!-- <nav>
         <ul>
             <li style="float:left"><a class="active" href="#">Paris Guide</a></li>
             <li><a href="#news">News</a></li>
@@ -28,7 +31,26 @@
             <li><a href="#travel">Travel</a></li>
             <li><a href="#planning">Planning</a></li>
         </ul>
+    </nav> -->
+
+    <nav>
+        <div class="navbarContainer">
+            <a href="#" class="navbarBrand active">Paris Guide</a>
+            <button class="navbarToggler">
+                <span class="navbarTogglerIcon"><img src="images/menu.png"></span>
+            </button>
+            <div class="navbarNav">
+                <a href="#planning">Planning</a>
+                <a href="#travel">Travel</a>
+                <a href="#food">Food</a>
+                <a href="#shop">Shop</a>
+                <a href="#news">News</a>
+                
+            </div>
+        </div>
     </nav>
+    
+    
 
     <div class="imageGallery">
         <div class="imageContainer">
@@ -53,7 +75,7 @@
             <div class="textHeader">Where to stay?</div>
             <div class="inputFields">
                 <input type="text" id="searchInput" placeholder="Search by Hotel Name...">
-                <div>
+                <div class="sort">
                     <label for="sortByRating">Sort by Rating:</label>
                     <select id="sortByRating">
                         <option value=""></option>
@@ -239,6 +261,7 @@
     <!-- Scripts -->
     <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHGBDtljvjrcBMif2-aQDGfXdIecwhnik&loading=async&callback=loadMap&libraries=marker,places"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 

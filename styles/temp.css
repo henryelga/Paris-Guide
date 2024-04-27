@@ -45,7 +45,7 @@ body {
 
 
 /* NavBar */
-
+/* 
 nav {
     position: fixed;
     top: 0;
@@ -79,6 +79,61 @@ nav li a {
 }
 
 nav li a:hover:not(.active) {
+    background-color: #111;
+} */
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #000;
+}
+
+.navbarContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbarBrand {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbarToggler {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+.navbarTogglerIcon {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.navbarNav {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbarNav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.navbarNav a:hover:not(.active) {
     background-color: #111;
 }
 

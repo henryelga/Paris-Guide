@@ -1,0 +1,150 @@
+@media (max-width: 1145px) {
+    input[type="text"] {
+        width: 30%;
+    }
+
+    .foodText {
+        padding-top: 1em;
+        width: 60%;
+        line-height: 2em;
+    }
+}
+
+@media (max-width: 1025px) {
+
+    .imageText {
+        font-size: 2em;
+    }
+
+    .inputFields {
+        flex-direction: column;
+        align-items: center;
+        margin: 0 1em;
+    }
+
+    input[type="text"],
+    select {
+        width: 100%;
+    }
+
+    select {
+        display: flex;
+        width: 20em;
+    }
+
+    .mainContainer {
+        margin: auto 2em;
+    }
+
+    #hotelList {
+        margin: auto 1em;
+    }
+}
+
+@media (max-width: 850px) {
+    #food {
+        background-image: url("/images/food_bg_res.jpg");
+        background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+
+    .foodText{
+        width: 80%;
+    }
+}
+
+@media (max-width: 750px) {
+    .imageText {
+        font-size: 1.5em;
+    }
+
+    .imageContainer:hover img {
+        transform: none;
+        filter: brightness(100%);
+    }
+}
+
+@media (max-width: 680px) {
+    .imageGallery {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .imageContainer {
+        width: 100vw;
+        height: 33vh;
+        transition: none;
+    }
+
+    .imageContainer img {
+        width: 100vw;
+        height: auto;
+    }
+
+    .imageContainer:hover img {
+        filter: brightness(100%);
+    }
+}
+
+@media (max-width: 650px) {
+    #hotelList {
+        margin: auto 0;
+    }
+}
+
+@media (max-width: 550px) {
+    .mainContainer {
+        margin: auto .5em;
+    }
+}
+
+@media (max-width: 410px) {
+    .imageText {
+        font-size: 1em;
+    }
+
+    select {
+        width: 100%;
+    }
+}
+
+@media (max-width: 380px) {
+    .mainContainer {
+        margin: auto .09em;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbarNav {
+        display: none;
+    }
+
+    .navbarToggler {
+        display: block;
+    }
+
+    .navbarNav.show {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #000;
+    }
+}
+
+@media (max-width: 900px) {
+    .hotelBox {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .imageDiv {
+        max-width: 50%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+}

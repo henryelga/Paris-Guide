@@ -1,3 +1,13 @@
+// Hamburger Menu
+
+$(document).ready(function() {
+  $(".navbarToggler").click(function() {
+      $(".navbarNav").toggleClass("show");
+  });
+});
+
+
+
 // Scroll to Top Function
 
 var scrollToTopBtn = document.querySelector(".scrollToTopBtn");
@@ -153,7 +163,8 @@ document.addEventListener("DOMContentLoaded", function () {
 // const newsURL =
 //   "https://serpapi.com/search?engine=google_news&q=france%20olympics&api_key=cde9815a478bd22457922ddd15304b441b8774ee5084546b9e1fd1705a434590";
 
-const newsURL = "https://serpapi.com/search?engine=google&q=france+olympics&google_domain=google.com&location=Austin,+TX,+Texas,+United+States&tbm=nws&hl=en&gl=us&api_key=cde9815a478bd22457922ddd15304b441b8774ee5084546b9e1fd1705a434590";
+const newsURL =
+  `https://serpapi.com/search?engine=google&q=france+olympics&google_domain=google.com&location=Austin,+TX,+Texas,+United+States&tbm=nws&hl=en&gl=us&api_key=cde9815a478bd22457922ddd15304b441b8774ee5084546b9e1fd1705a434590`;
 
 fetch(newsURL)
   .then((response) => {
@@ -232,6 +243,7 @@ function loadMap() {
 function getNearbyServicesMarkers(results, status) {
   if (status === google.maps.places.PlacesServiceStatus.OK) {
     results.forEach((result) => {
+      // console.log(result);
       createMarker(result);
     });
   }
