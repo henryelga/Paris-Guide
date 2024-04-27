@@ -1,12 +1,28 @@
 // Hamburger Menu
 
-$(document).ready(function() {
-  $(".navbarToggler").click(function() {
-      $(".navbarNav").toggleClass("show");
+$(document).ready(function () {
+  $(".navbarToggler").click(function () {
+    $(".navbarNav").toggleClass("show");
   });
 });
 
+// Footer DropDown
 
+document.addEventListener("DOMContentLoaded", function () {
+  const textHeaders = document.querySelectorAll(".textHeader");
+
+  textHeaders.forEach((header) => {
+    header.addEventListener("click", function () {
+      // Remove active class from all textHeaders
+      textHeaders.forEach((header) => {
+        header.classList.remove("activeFooter");
+      });
+
+      // Toggle active class on clicked textHeader
+      this.classList.toggle("activeFooter");
+    });
+  });
+});
 
 // Scroll to Top Function
 
@@ -163,8 +179,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // const newsURL =
 //   "https://serpapi.com/search?engine=google_news&q=france%20olympics&api_key=cde9815a478bd22457922ddd15304b441b8774ee5084546b9e1fd1705a434590";
 
-const newsURL =
-  `https://serpapi.com/search?engine=google&q=france+olympics&google_domain=google.com&location=Austin,+TX,+Texas,+United+States&tbm=nws&hl=en&gl=us&api_key=cde9815a478bd22457922ddd15304b441b8774ee5084546b9e1fd1705a434590`;
+const newsURL = `https://serpapi.com/search?engine=google&q=france+olympics&google_domain=google.com&location=Austin,+TX,+Texas,+United+States&tbm=nws&hl=en&gl=us&api_key=cde9815a478bd22457922ddd15304b441b8774ee5084546b9e1fd1705a434590`;
 
 fetch(newsURL)
   .then((response) => {
