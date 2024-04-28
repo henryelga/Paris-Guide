@@ -13,13 +13,14 @@
  - [x] Allow users to show/hide Points of Interest on the map (4%)
  - [x] Include advanced custom content, incorporating images (4%)
  - [x] Integrate custom markers into the display (4%)
- - [ ] Enable users to find a route between various locations (4%)
+ - [x] Enable users to find a route between various locations (4%)
  - [ ] Allow users to select multiple stops along a route (4%)
  - [ ] Develop the application as a React web app (4%)
  - [ ] Host the application on a server that serves webpages as HTTPS (4%)
  - [ ] Enable the application to be downloadable as a Progressive Web App (PWA) on a computer, mobile phone, or tablet (4%)
 
 ### References:
+- https://derek.comp.dkit.ie/
 - https://www.travelguys.fr/en/2023/12/04/olympics-2024-in-paris-what-to-expect-as-a-tourist/
 - https://olympics.com/en/news/things-to-do-in-paris-2024-olympics
 - https://serpapi.com/google-hotels-api
