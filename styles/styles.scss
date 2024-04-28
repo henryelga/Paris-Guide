@@ -608,7 +608,7 @@ select {
 	width: 350px;
 }
 
-.submitButton{
+.submitButton {
 	text-align: center;
 }
 
@@ -621,7 +621,7 @@ select {
 	background-color: #eee;
 	transform: transform 0.5s ease;
 
-	&:hover{
+	&:hover {
 		background-color: $background-color_9;
 		transform: transform 0.5s ease;
 	}
@@ -696,6 +696,21 @@ button {
 
 	#hotelList {
 		margin: auto 1em;
+	}
+
+	#controlPanel {
+		margin: 2rem 1em;
+	}
+
+	#submit {
+		width: 100%;
+	}
+}
+
+@media (max-width: 980px) {
+	#controlPanel {
+		display: flex;
+		flex-direction: column;
 	}
 }
 
@@ -812,6 +827,18 @@ button {
 			}
 		}
 	}
+
+	#controlPanel {
+		margin: 1em 0.2rem;
+
+		div{
+			margin: 0;
+		}
+	}
+
+	#start, #end{
+		width: auto;
+	}
 }
 
 @media (max-width: 680px) {
@@ -835,6 +862,15 @@ button {
 				filter: brightness(100%);
 			}
 		}
+	}
+
+	#controlPanel >div{
+		display: flex;
+		flex-direction: column;
+	}
+
+	#submit{
+		width: auto;
 	}
 }
 

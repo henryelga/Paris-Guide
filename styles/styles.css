@@ -636,6 +636,18 @@ button {
   #hotelList {
     margin: auto 1em;
   }
+  #controlPanel {
+    margin: 2rem 1em;
+  }
+  #submit {
+    width: 100%;
+  }
+}
+@media (max-width: 980px) {
+  #controlPanel {
+    display: flex;
+    flex-direction: column;
+  }
 }
 @media (max-width: 900px) {
   .hotelBox {
@@ -727,6 +739,15 @@ button {
     transform: none;
     filter: brightness(100%);
   }
+  #controlPanel {
+    margin: 1em 0.2rem;
+  }
+  #controlPanel div {
+    margin: 0;
+  }
+  #start, #end {
+    width: auto;
+  }
 }
 @media (max-width: 680px) {
   .imageGallery {
@@ -744,6 +765,13 @@ button {
   }
   .imageContainer:hover img {
     filter: brightness(100%);
+  }
+  #controlPanel > div {
+    display: flex;
+    flex-direction: column;
+  }
+  #submit {
+    width: auto;
   }
 }
 @media (max-width: 650px) {
