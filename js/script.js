@@ -227,8 +227,12 @@ fetch(newsURL)
 
 let service;
 let map;
+let directionsRenderer = null;
 
 function loadMap() {
+  new google.maps.places.Autocomplete(start);
+  new google.maps.places.Autocomplete(end);
+
   let services_centre_location = { lat: 48.856614, lng: 2.3522219 }; // Paris
 
   map = new google.maps.Map(document.getElementById("map"), {
@@ -253,6 +257,28 @@ function loadMap() {
     },
     getNearbyServicesMarkers
   );
+
+  directionsRenderer = new google.maps.DirectionsRenderer();
+  directionsRenderer.setMap(map);
+
+  directionsRenderer.setPanel(document.getElementById("directions"));
+
+  calculateRoute("DRIVING");
+}
+
+function calculateRoute(travelMode = "DRIVING") {
+  document.getElementById("transport-mode").innerHTML = travelMode;
+  let start = document.getElementById("start").value;
+  let end = document.getElementById("end").value;
+
+  let request = { origin: start, destination: end, travelMode: travelMode };
+
+  directionsService = new google.maps.DirectionsService();
+  directionsService.route(request, (route, status) => {
+    if (status === google.maps.DirectionsStatus.OK) {
+      directionsRenderer.setDirections(route);
+    }
+  });
 }
 
 function getNearbyServicesMarkers(results, status) {

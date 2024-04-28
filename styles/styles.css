@@ -526,6 +526,83 @@ select {
   margin-top: 8px;
 }
 
+#controlPanel {
+  display: flex;
+  align-items: center;
+  margin: 2rem 4em;
+}
+#controlPanel > div {
+  display: flex;
+  align-items: center;
+  margin-right: 3rem;
+}
+#controlPanel > div .selectLocationLabel {
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+#controlPanel > div #start,
+#controlPanel > div #end {
+  padding: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 360px;
+}
+
+#submit {
+  padding: 0.6rem 1rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 350px;
+}
+
+.submitButton {
+  text-align: center;
+}
+
+.material-icons {
+  font-size: 34px;
+  vertical-align: middle;
+  border: #000 0.1px solid;
+  border-radius: 4px;
+  padding: 5px;
+  background-color: #eee;
+  transform: transform 0.5s ease;
+}
+.material-icons:hover {
+  background-color: #4CAF50;
+  transform: transform 0.5s ease;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+#transport-mode {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+#directions {
+  margin-top: 1.5rem;
+}
+#directions summary {
+  font-weight: bold;
+  cursor: pointer;
+}
+#directions details {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
 @media (max-width: 1145px) {
   input[type=text] {
     width: 30%;

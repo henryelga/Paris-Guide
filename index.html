@@ -15,6 +15,7 @@
 
     <!-- Social Media Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel=stylesheet>
 
     <!-- <link rel="stylesheet" href="styles/temp.css">
     <link rel="stylesheet" href="styles/res.css"> -->
@@ -106,7 +107,32 @@
             <p>
             <div class="textSmall">PLAN YOUR TRIP</div>
             <div class="textHeader">Getting around Paris</div>
-            <p>Display Google Maps Here</p>
+            <div id=controlPanel>
+                <div>
+                    <span class=selectLocationLabel>Start Point:</span><br>
+                    <input id=start type=text>
+                </div>
+
+                <div>
+                    <span class=selectLocationLabel>End Point:</span><br>
+                    <input id=end type=text>
+                </div>
+            </div>
+            <div class="submitButton">
+                <input type=button onclick=calculateRoute() id=submit value=Submit>
+            </div><br>
+            <div class="submitButton">
+                <button><i class=material-icons onclick="calculateRoute('DRIVING')">directions_car</i></button>
+                <button><i class=material-icons onclick="calculateRoute('TRANSIT')">directions_bus</i></button>
+                <button><i class=material-icons onclick="calculateRoute('BICYCLING')">directions_bike</i></button>
+                <button><i class=material-icons onclick="calculateRoute('WALKING')">directions_walk</i></button>
+            </div>
+
+            <h1 id=transport-mode>Driving</h1>
+
+            <details id=directions>
+                <summary>Directions</summary>
+            </details><br>
             <div id=map></div>
             </p>
         </div>
