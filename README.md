@@ -22,7 +22,7 @@
 - [x] Add logo icon
 - [x] Add Paris Olympics Image
 - [x] Add timer to olympics
-- [ ] FAQ Section
+- [x] FAQ Section
 
 ### References:
 - https://derek.comp.dkit.ie/
