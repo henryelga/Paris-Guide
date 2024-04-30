@@ -14,7 +14,7 @@
  - [x] Include advanced custom content, incorporating images (4%)
  - [x] Integrate custom markers into the display (4%)
  - [x] Enable users to find a route between various locations (4%)
- - [ ] Allow users to select multiple stops along a route (4%)
+ - [x] Allow users to select multiple stops along a route (4%)
  - [ ] Develop the application as a React web app (4%)
  - [ ] Host the application on a server that serves webpages as HTTPS (4%)
  - [ ] Enable the application to be downloadable as a Progressive Web App (PWA) on a computer, mobile phone, or tablet (4%)
@@ -32,3 +32,5 @@
 - https://serpapi.com/google-news-api 
 - https://codepen.io/marcelrojas/pen/GRZOWwp
 - https://latlong.info/france/paris#info
+- https://developers.google.com/maps/documentation/routes/compute_route_matrix
+- https://stackoverflow.com/questions/50293801/google-maps-javascript-api-v3-display-multiple-routes
