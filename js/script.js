@@ -363,7 +363,7 @@ function getNearbyServicesMarkers(results, status) {
 
 let infoWindow = null;
 function createMarker(place) {
-  console.log(place.types);
+  // console.log(place.types);
   let icon = document.createElement("img");
   // icon.src = place.icon;
   if (place.types.includes("lodging")) {

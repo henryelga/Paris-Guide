@@ -17,7 +17,7 @@
  - [x] Allow users to select multiple stops along a route (4%)
  - [ ] Develop the application as a React web app (4%)
  - [ ] Host the application on a server that serves webpages as HTTPS (4%)
- - [ ] Enable the application to be downloadable as a Progressive Web App (PWA) on a computer, mobile phone, or tablet (4%)
+ - [x] Enable the application to be downloadable as a Progressive Web App (PWA) on a computer, mobile phone, or tablet (4%)
 
 - [x] Add logo icon
 - [x] Add Paris Olympics Image

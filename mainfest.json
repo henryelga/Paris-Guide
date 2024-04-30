@@ -1,0 +1,25 @@
+{
+    "name": "Paris Guide",
+    "short_name": "Paris Guide",
+    "description": "Google Maps focused, website that can be used by tourists who wish to travel to the Olympics",
+    "start_url": "./",
+    "scope": ".",
+    "display": "standalone",
+    "background_color": "white",
+    "theme_color": "white",
+    "orientation": "any",
+    "icons": [{
+      "src": "images/logo.png",
+        "sizes": "16x16 64x64",
+        "type": "image/png"
+      }, {
+        "src": "images/logo.png",
+        "sizes": "128x128 512x512",
+        "type": "image/png"
+      }, {
+        "src": "images/logo.png",
+        "sizes": "1024x1024",
+        "type": "image/png",
+        "purpose": "maskable"
+      }]
+  }
