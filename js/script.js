@@ -363,10 +363,16 @@ function getNearbyServicesMarkers(results, status) {
 
 let infoWindow = null;
 function createMarker(place) {
+  console.log(place.types);
   let icon = document.createElement("img");
-  icon.src = place.icon;
-  icon.style.width = "20px";
-  icon.style.height = "20px";
+  // icon.src = place.icon;
+  if (place.types.includes("lodging")) {
+    icon.src = "images/hotel.png";
+  } else {
+    icon.src = place.icon;
+  }
+  icon.style.width = "25px";
+  icon.style.height = "25px";
 
   let marker = new google.maps.marker.AdvancedMarkerElement({
     map: map,
