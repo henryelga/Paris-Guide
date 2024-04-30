@@ -4,8 +4,11 @@ $color_3: #818080;
 $color_4: #000;
 $color_5: #594e7a;
 $color_6: #555;
+$color_7: #333;
+$color_8: #666;
 $font-family_1: "Platypi", serif;
 $font-family_2: "Lugrasimo", cursive;
+$font-family_3: 'Montserrat', sans-serif;
 $background-color_1: black;
 $background-color_2: #000;
 $background-color_3: transparent;
@@ -16,46 +19,15 @@ $background-color_7: #f5f5f5;
 $background-color_8: rgba(0, 0, 0, 0);
 $background-color_9: #4CAF50;
 $background-color_10: transparent;
+$background-color_11: #f2f2f2;
+$background-color_12: #fff;
+$background-color_13: #333;
 $border-color_1: #000;
+
+
 
 /* Scroll to top */
 /* NavBar */
-/* 
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #000;
-}
-
-nav li {
-    float: right;
-    border-left: 1px solid #FFFAFF;
-}
-
-nav li:first-child {
-    border-left: none;
-}
-
-nav li a {
-    display: block;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    text-decoration: none;
-}
-
-nav li a:hover:not(.active) {
-    background-color: #111;
-} */
 /* Image Gallery */
 /* Main Container */
 /* Footer */
@@ -102,6 +74,16 @@ body {
 	transform: translateY(0);
 }
 
+.menuLogo {
+	height: 40px;
+	margin: 0 10px;
+}
+
+.footerLogo {
+	display: flex;
+	align-items: center;
+}
+
 nav {
 	position: fixed;
 	top: 0;
@@ -121,6 +103,8 @@ nav {
 	color: $color_2;
 	text-decoration: none;
 	font-weight: bold;
+	display: flex;
+	align-items: center;
 }
 
 .navbarToggler {
@@ -195,6 +179,83 @@ nav {
 	color: $color_2;
 	font-weight: bold;
 }
+
+.countdownSection {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	margin-top: 2rem;
+}
+
+.countdownContainer {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	background-color: $background-color_12;
+	width: 80%;
+	padding: 30px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.235);
+}
+
+.countdownImage {
+	margin-right: 30px;
+
+	img {
+		max-width: 200px;
+		border-radius: 5px;
+	}
+}
+
+.countdownTimer {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	font-family: $font-family_3;
+}
+
+.countdownItem {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 15px;
+	position: relative;
+	overflow: hidden;
+
+	&:before {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 0;
+		background-color: $background-color_13;
+		transition: height 0.3s ease-in-out;
+	}
+}
+
+.countdownValue {
+	font-size: 48px;
+	font-weight: bold;
+	color: $color_7;
+	position: relative;
+	z-index: 1;
+}
+
+.countdownLabel {
+	font-size: 16px;
+	color: $color_8;
+	margin-top: 5px;
+}
+
+.countdownItem.turn {
+	&:before {
+		height: 100%;
+	}
+}
+
 
 .mainContainer {
 	margin: 0 3em;
@@ -483,6 +544,67 @@ select {
 	margin-top: 10px;
 }
 
+.faqQuestion {
+	font-weight: bold;
+}
+
+.faqSection {
+	margin: 0 30px;
+
+	.faqItem {
+		border-bottom: 1px solid #ccc;
+		margin-bottom: 10px;
+		padding: 15px 0;
+
+		details {
+			summary {
+				padding: 10px;
+				cursor: pointer;
+				list-style: none;
+				position: relative;
+
+				&::-webkit-details-marker {
+					display: none;
+				}
+
+				&:after {
+					content: "+";
+					position: absolute;
+					right: 10px;
+					font-size: 20px;
+				}
+			}
+
+			&[open] {
+				summary {
+					&:after {
+						content: "-";
+					}
+				}
+
+				.faqAnswer {
+					display: block;
+				}
+			}
+
+			.faqAnswer {
+				padding: 10px;
+				display: none;
+
+				ul {
+					list-style-type: disc;
+					padding-left: 20px;
+				}
+
+				li {
+					margin-bottom: 5px;
+				}
+			}
+		}
+	}
+}
+
+
 #food {
 	height: 90vh;
 	background-color: $background-color_2;
@@ -715,6 +837,10 @@ button {
 }
 
 @media (max-width: 900px) {
+	.countdownContainer {
+		width: 100%;
+	}
+
 	.hotelBox {
 		display: flex;
 		flex-direction: column-reverse;
@@ -729,6 +855,12 @@ button {
 }
 
 @media (max-width: 850px) {
+
+	.countdownContainer {
+		display: flex;
+		flex-direction: column;
+	}
+
 	#food {
 		background-image: url("/images/food_bg_res.jpg");
 		background-size: 100%;
@@ -831,12 +963,13 @@ button {
 	#controlPanel {
 		margin: 1em 0.2rem;
 
-		div{
+		div {
 			margin: 0;
 		}
 	}
 
-	#start, #end{
+	#start,
+	#end {
 		width: auto;
 	}
 }
@@ -855,6 +988,8 @@ button {
 		img {
 			width: 100vw;
 			height: auto;
+			object-fit: cover;
+			transform: translateY(-10rem);
 		}
 
 		&:hover {
@@ -864,12 +999,12 @@ button {
 		}
 	}
 
-	#controlPanel >div{
+	#controlPanel>div {
 		display: flex;
 		flex-direction: column;
 	}
 
-	#submit{
+	#submit {
 		width: auto;
 	}
 }
@@ -884,6 +1019,10 @@ button {
 		background-image: none;
 	}
 
+	.foodContent {
+		padding-top: 0;
+	}
+
 	.foodText {
 		width: 100%;
 		line-height: 1.4em;
@@ -896,6 +1035,10 @@ button {
 }
 
 @media (max-width: 550px) {
+	.countdownContainer {
+		padding: 15px;
+	}
+
 	.mainContainer {
 		margin: auto .5em;
 	}

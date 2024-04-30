@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo.png" type="image/png">
 
     <link rel="manifest" href="manifest.json">
 
@@ -62,7 +63,9 @@
 
     <nav>
         <div class="navbarContainer">
-            <a href="#" class="navbarBrand active">Paris Guide</a>
+            <a href="#" class="navbarBrand active">
+                <img class="menuLogo" src="images/logo.png" alt="">
+                Paris Guide</a>
             <button class="navbarToggler">
                 <span class="navbarTogglerIcon"><img src="images/menu.png"></span>
             </button>
@@ -82,19 +85,50 @@
     <div class="imageGallery">
         <div class="imageContainer">
             <img src="images/img1.jpg" alt="">
-            <div class="imageText">Explore the City's Night-life Charms</div>
+            <div class="imageText">Vote for your favourite opening cermony moment</div>
         </div>
         <div class="imageContainer">
-            <img src="images/img2.jpg" alt="">
-            <div class="imageText">Daytime Itinerary Must-Haves Gems</div>
+            <img src="images/img2.1.jpg" alt="">
+            <div class="imageText">The Olympic Qualifier Series is coming</div>
         </div>
         <div class="imageContainer">
-            <img src="images/img3.jpg" alt="">
-            <div class="imageText">Where to Find the Best Souvenirs</div>
+            <img src="images/img3.1.jpg" alt="">
+            <div class="imageText">All Sports are back on sale!</div>
         </div>
     </div>
 
     <div class="mainContainer">
+        <div class="countdownSection">
+            <div class="countdownContainer">
+                <div>
+                    <span style="font-weight: bold;">Olympic Games Paris 2024</span>
+                    -
+                    26 July - 11 August, 2024
+                </div>
+                <div class="countdownImage">
+                    <img src="images/img4.png" alt="Countdown Image">
+                </div>
+                <div class="countdownTimer">
+                    <div class="countdownItem">
+                        <div class="countdownValue" id="days">00</div>
+                        <div class="countdownLabel">Days</div>
+                    </div>
+                    <div class="countdownItem">
+                        <div class="countdownValue" id="hours">00</div>
+                        <div class="countdownLabel">Hours</div>
+                    </div>
+                    <div class="countdownItem">
+                        <div class="countdownValue" id="minutes">00</div>
+                        <div class="countdownLabel">Minutes</div>
+                    </div>
+                    <div class="countdownItem">
+                        <div class="countdownValue" id="seconds">00</div>
+                        <div class="countdownLabel">Seconds</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <button class="scrollToTopBtn">☝️</button>
         <div id="planning" class="planTrip">
             <p>
@@ -254,6 +288,134 @@
             </p>
         </div>
 
+        <div class="faqSection"><br><br>
+            <div class="textSmall">TOP FAQ's</div>
+            <div class="textHeader">Frequently Asked Questions</div><br><br>
+            <div class="faqItem">
+                <details>
+                    <summary class="faqQuestion">How to buy tickets for the Olympic Games Paris 2024?</summary>
+                    <div class="faqAnswer">
+                        <p>Tickets for the Olympic Games Paris 2024 are available for spectators around the world only
+                            on the official ticketing website. To buy tickets, click <a href="">here</a>. <br><br>
+
+                            The Paris 2024 Hospitality program offers packages that include tickets for sporting events
+                            combined with exceptional services in the competition venues (boxes, lounges) or in the
+                            heart of the city (accommodation, transport options, gastronomy, tourist activities, etc.).
+                            <br><br>
+
+                            The Paris 2024 Hospitality program is delivered by the official Paris 2024 Hospitality
+                            provider, On Location. <br><br>
+
+                            For more information about the Paris 2024 Hospitality & Travel offers, click <a
+                                href="">here</a>.
+                        </p>
+                    </div>
+                </details>
+            </div>
+            <div class="faqItem">
+                <details>
+                    <summary class="faqQuestion">What is the official mascot of the Olympic Games Paris 2024?</summary>
+                    <div class="faqAnswer">
+                        <p>The Olympic Games Paris 2024 mascot is Olympic Phryge. The mascot is based on the traditional
+                            small Phrygian hats for which they are shaped after. <br><br>
+
+                            The name and design were chosen as symbols of freedom and to represent allegorical figures
+                            of the French republic. <br><br>
+
+                            The Olympic Phryge is decked out in blue, white and red - the colours of France’s famed
+                            tricolour flag - with the golden Paris 2024 logo emblazoned across its chest.</p>
+                    </div>
+                </details>
+            </div>
+            <div class="faqItem">
+                <details>
+                    <summary class="faqQuestion">What sports are in the Olympic Games Paris 2024?</summary>
+                    <div class="faqAnswer">
+                        <p>
+                        <ul>
+                            <li>3x3 Basketball</li>
+                            <li>Archery</li>
+                            <li>Artistic Gymnastics</li>
+                            <li>Artistic Swimming</li>
+                            <li>Athletics</li>
+                            <li>Badminton</li>
+                            <li>Basketball</li>
+                            <li>Beach Volleyball</li>
+                            <li>Boxing</li>
+                            <li>Breaking</li>
+                            <li>Canoe Slalom</li>
+                            <li>Canoe Sprint</li>
+                            <li>Cycling BMX Freestyle</li>
+                            <li>Cycling BMX Racing</li>
+                            <li>Cycling Mountain Bike</li>
+                            <li>Cycling Road</li>
+                            <li>Cycling Track</li>
+                            <li>Diving</li>
+                            <li>Equestrian</li>
+                            <li>Fencing</li>
+                            <li>Football</li>
+                            <li>Golf</li>
+                            <li>Handball</li>
+                            <li>Hockey</li>
+                            <li>Judo</li>
+                            <li>Marathon Swimming</li>
+                            <li>Modern Pentathlon</li>
+                            <li>Rhythmic Gymnastics</li>
+                            <li>Rowing</li>
+                            <li>Rugby Sevens</li>
+                            <li>Sailing</li>
+                            <li>Shooting</li>
+                            <li>Skateboarding</li>
+                            <li>Sport Climbing</li>
+                            <li>Surfing</li>
+                            <li>Swimming</li>
+                            <li>Table Tennis</li>
+                            <li>Taekwondo</li>
+                            <li>Tennis</li>
+                            <li>Trampoline</li>
+                            <li>Triathlon</li>
+                            <li>Volleyball</li>
+                            <li>Water Polo</li>
+                            <li>Weightlifting</li>
+                            <li>Wrestling</li>
+                        </ul>
+                        </p>
+                    </div>
+                </details>
+            </div>
+            <div class="faqItem">
+                <details>
+                    <summary class="faqQuestion">Where to watch the Olympic Games Paris 2024?</summary>
+                    <div class="faqAnswer">
+                        <p>In France, the 2024 Olympic Games will be broadcast by Warner Bros. Discovery (formerly
+                            Discovery Inc.) via Eurosport, with free-to-air coverage sub-licensed to the country's
+                            public broadcaster France Télévisions. For a detailed list of the Paris 2024 Media Rights
+                            Holders
+                            <a href="https://olympics.com/ioc/theme-media-rights-holder" target="_blank">
+                                here</a>.
+                        </p>
+                    </div>
+                </details>
+            </div>
+            <div class="faqItem">
+                <details>
+                    <summary class="faqQuestion">How many athletes compete in the Olympic Games Paris 2024?</summary>
+                    <div class="faqAnswer">
+                        <p>Around 10,500 athletes from 206 NOCs will compete.</p>
+                    </div>
+                </details>
+            </div>
+            <div class="faqItem">
+                <details>
+                    <summary class="faqQuestion">What year did the Olympic Games start?</summary>
+                    <div class="faqAnswer">
+                        <p>The inaugural Games took place in 1896 in Athens, Greece.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+
         <div class="planTrip bottomLine">
             <p>
             <div class="textSmall">FYI</div>
@@ -276,7 +438,9 @@
     <footer>
         <div class="footerContent">
             <div class="socialMedia">
-                <div class="textHeader active">Paris Guide</div>
+                <div class="textHeader active footerLogo">
+                    <img class="menuLogo" src="images/logo.png" alt="">Paris Guide
+                </div>
                 <div class="icons">
                     <a href="#" class="fa fa-facebook"></a>
                     <a href="#" class="fa fa-twitter"></a>

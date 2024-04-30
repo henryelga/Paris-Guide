@@ -19,6 +19,11 @@
  - [ ] Host the application on a server that serves webpages as HTTPS (4%)
  - [ ] Enable the application to be downloadable as a Progressive Web App (PWA) on a computer, mobile phone, or tablet (4%)
 
+- [x] Add logo icon
+- [x] Add Paris Olympics Image
+- [x] Add timer to olympics
+- [ ] FAQ Section
+
 ### References:
 - https://derek.comp.dkit.ie/
 - https://www.travelguys.fr/en/2023/12/04/olympics-2024-in-paris-what-to-expect-as-a-tourist/
