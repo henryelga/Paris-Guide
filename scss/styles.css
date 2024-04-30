@@ -18,6 +18,19 @@ body {
   font-optical-sizing: auto;
 }
 
+a,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+}
+
 .active {
   font-family: "Lugrasimo", cursive;
   font-weight: 800;
@@ -496,6 +509,9 @@ select {
 
 .faqSection {
   margin: 0 30px;
+}
+.faqSection a {
+  text-decoration: underline;
 }
 .faqSection .faqItem {
   border-bottom: 1px solid #ccc;

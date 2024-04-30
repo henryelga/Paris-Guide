@@ -46,6 +46,20 @@ body {
 	font-optical-sizing: auto;
 }
 
+a,
+a:visited {
+	text-decoration: none;
+	color: inherit;
+	background-color: transparent;
+	border: none;
+	padding: 0;
+	margin: 0;
+	font-size: inherit;
+	font-weight: inherit;
+	font-family: inherit;
+}
+
+
 .active {
 	font-family: $font-family_2;
 	font-weight: 800;
@@ -550,6 +564,10 @@ select {
 
 .faqSection {
 	margin: 0 30px;
+
+	a{
+		text-decoration: underline;
+	}
 
 	.faqItem {
 		border-bottom: 1px solid #ccc;
