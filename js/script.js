@@ -267,6 +267,10 @@ let directionsRenderer = null;
 function loadMap() {
   new google.maps.places.Autocomplete(start);
   new google.maps.places.Autocomplete(end);
+  let waypointInputs = document.querySelectorAll(".waypointInput");
+  waypointInputs.forEach((input) => {
+    new google.maps.places.Autocomplete(input);
+  });
 
   let services_centre_location = { lat: 48.856614, lng: 2.3522219 }; // Paris
 
@@ -301,12 +305,44 @@ function loadMap() {
   calculateRoute("DRIVING");
 }
 
+// function calculateRoute(travelMode = "DRIVING") {
+//   document.getElementById("transport-mode").innerHTML = travelMode;
+//   let start = document.getElementById("start").value;
+//   let end = document.getElementById("end").value;
+
+//   let request = { origin: start, destination: end, travelMode: travelMode };
+
+//   directionsService = new google.maps.DirectionsService();
+//   directionsService.route(request, (route, status) => {
+//     if (status === google.maps.DirectionsStatus.OK) {
+//       directionsRenderer.setDirections(route);
+//     }
+//   });
+// }
+
 function calculateRoute(travelMode = "DRIVING") {
   document.getElementById("transport-mode").innerHTML = travelMode;
   let start = document.getElementById("start").value;
   let end = document.getElementById("end").value;
 
-  let request = { origin: start, destination: end, travelMode: travelMode };
+  let waypoints = [];
+  let waypointInputs = document.querySelectorAll(".waypointInput");
+
+  waypointInputs.forEach((input) => {
+    if (input.value.trim() !== "") {
+      waypoints.push({
+        location: input.value,
+        stopover: true,
+      });
+    }
+  });
+
+  let request = {
+    origin: start,
+    destination: end,
+    waypoints: waypoints,
+    travelMode: travelMode,
+  };
 
   directionsService = new google.maps.DirectionsService();
   directionsService.route(request, (route, status) => {

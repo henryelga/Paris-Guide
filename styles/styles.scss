@@ -697,12 +697,14 @@ select {
 
 #controlPanel {
 	display: flex;
-	align-items: center;
+	flex-direction: column;
+	// align-items: center;
 	margin: 2rem 4em;
+	text-align: center;
 
 	>div {
-		display: flex;
-		align-items: center;
+		// display: flex;
+		// align-items: center;
 		margin-right: 3rem;
 
 		.selectLocationLabel {
@@ -715,7 +717,7 @@ select {
 			padding: 0.9rem;
 			border: 1px solid #ccc;
 			border-radius: 4px;
-			width: 360px;
+			// width: 360px;
 		}
 	}
 }
@@ -968,10 +970,10 @@ button {
 		}
 	}
 
-	#start,
-	#end {
-		width: auto;
-	}
+	// #start,
+	// #end {
+	// 	 width: auto;
+	// }
 }
 
 @media (max-width: 680px) {
