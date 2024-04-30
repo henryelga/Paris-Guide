@@ -2,6 +2,8 @@
 
 ### Author: Elga Jerusha Henry
 
+##### Hosted Site: https://paris-guide-ejh.netlify.app/
+
 ### Website Features:
  - [x] Ensure a professional appearance that would attract potential users (20%)
  - [x] Create a responsive design for mobile phones (< 500px) and tablets (between 500px and 1000px) in both portrait and landscape mode, as well as computers (> 1000px) (20%)
@@ -23,8 +25,6 @@
 - [x] Add Paris Olympics Image
 - [x] Add timer to olympics
 - [x] FAQ Section
-
-Hosted Site: https://paris-guide-ejh.netlify.app/
 
 ### References:
 - https://derek.comp.dkit.ie/
