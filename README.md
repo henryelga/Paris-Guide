@@ -1,30 +1,27 @@
-# Full Stack Project
+# Paris Guide
 
-### Author: Elga Jerusha Henry
+## Application Features
 
-##### Hosted Site: https://paris-guide-ejh.netlify.app/
+- **Professional Design**: The application boasts a polished and attractive appearance to engage potential users.
+- **Responsive Layout**: Designed to be fully responsive across devices, including mobile phones (< 500px), tablets (500px to 1000px), and computers (> 1000px), in both portrait and landscape orientations.
+- **JSON Integration**: Reads a JSON object from a file and integrates it with Google Maps Place results.
+- **API Utilization**: Incorporates two relevant APIs, such as language translation and currency conversion.
+- **Visually Appealing Content**: Displays a variety of tourist-related content in an aesthetically pleasing manner.
+- **Tourist Information on Map**: Provides essential tourist information directly on the map.
+- **Content Filtering**: Allows users to filter content based on their preferences.
+- **Show/Hide Points of Interest**: Users can toggle the visibility of Points of Interest on the map.
+- **Custom Content**: Features advanced custom content, including images.
+- **Custom Markers**: Integrates unique markers to enhance the map display.
+- **Route Finding**: Enables users to find routes between various locations.
+- **Multiple Stops**: Allows users to select multiple stops along their chosen route.
+- **React Web App**: Developed as a React web application for optimal performance.
+- **Secure Hosting**: Hosted on a server that serves webpages over HTTPS.
+- **Progressive Web App (PWA)**: Users can download the application as a PWA on computers, mobile phones, or tablets.
+- **Logo Icon**: Includes a distinctive logo icon.
+- **Paris Olympics Image**: Features an image related to the Paris Olympics.
+- **Olympics Timer**: Incorporates a timer for the upcoming Olympics.
+- **FAQ Section**: Provides a dedicated FAQ section for user inquiries.
 
-### Website Features:
- - [x] Ensure a professional appearance that would attract potential users (20%)
- - [x] Create a responsive design for mobile phones (< 500px) and tablets (between 500px and 1000px) in both portrait and landscape mode, as well as computers (> 1000px) (20%)
- - [x] Read a JSON object from a JSON file and integrate it with the results of a google.maps.place object (8%)
- - [x] Utilize two appropriate APIs, such as language translation and currency conversion (8%)
- - [x] Provide a visually pleasing display of various tourist-related content (4%)
- - [x] Display useful tourist information on the map (4%)
- - [x] Implement content filtering for users (4%)
- - [x] Allow users to show/hide Points of Interest on the map (4%)
- - [x] Include advanced custom content, incorporating images (4%)
- - [x] Integrate custom markers into the display (4%)
- - [x] Enable users to find a route between various locations (4%)
- - [x] Allow users to select multiple stops along a route (4%)
- - [ ] Develop the application as a React web app (4%)
- - [x] Host the application on a server that serves webpages as HTTPS (4%)
- - [x] Enable the application to be downloadable as a Progressive Web App (PWA) on a computer, mobile phone, or tablet (4%)
-
-- [x] Add logo icon
-- [x] Add Paris Olympics Image
-- [x] Add timer to olympics
-- [x] FAQ Section
 
 ### References:
 - https://derek.comp.dkit.ie/
